@@ -1,0 +1,287 @@
+/* .{
+    box-sizing: border-box;
+    } */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+h1{
+  color: whitesmoke;
+  margin-left: 80px;
+}
+header {
+  background-color: #090a0f;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+nav #toggle,
+nav label {
+  display: none;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+#logo {
+  /* LOGO CSS   */
+  position: absolute;
+  margin-left: 2px;
+  margin-top: 2px;
+  width: 64px;
+  display: inline-block;
+}
+ul {
+  font-family: "Chivo Mono", monospace;
+  display: flex;
+  gap: 60px;
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  padding: 10px;
+  transition: 0.5s ease;
+}
+ul:hover li a {
+  color: #31e1f7;
+}
+ul:hover li a:not(:hover) {
+  color: white;
+  opacity: 0.3;
+  filter: blur(1px);
+}
+
+#about {
+  padding: 50px 20px;
+  text-align: center;
+}
+footer {
+  background-color: #090a0f;
+  color: gray;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feedback a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.feedback i {
+  margin-right: 5px;
+}
+
+.feedback a:hover {
+  color: #31e1f7;
+}
+main {
+  font-family: "Raleway", sans-serif;
+  background-image: radial-gradient(circle at center, #899dc4, #495d84);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+  font-weight: 300;
+}
+
+.all {
+  display: flex;
+  perspective: 10px;
+  transform: perspective(300px) rotateX(20deg);
+  will-change: perspective;
+  perspective-origin: center center;
+  transition: all 1.3s ease-out;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+.all:hover {
+  perspective: 1000px;
+  transition: all 1.3s ease-in;
+  transform: perspective(10000px) rotateX(0deg);
+}
+.all:hover .text {
+  opacity: 1;
+}
+.all:hover div {
+  opacity: 1;
+  transition-delay: 0s;
+}
+.all:hover .explainer {
+  opacity: 0;
+}
+
+.left,
+.center,
+.right,
+.lefter,
+.righter {
+  width: 200px;
+  height: 150px;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  box-shadow: 0 0 20px 5px rgba(100, 100, 255, 0.4);
+  opacity: 0;
+  transition: all 0.3s ease;
+  transition-delay: 1s;
+  position: relative;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #58d;
+  cursor: pointer;
+  background-blend-mode: color-burn;
+}
+.left:hover,
+.center:hover,
+.right:hover,
+.lefter:hover,
+.righter:hover {
+  box-shadow: 0 0 30px 10px rgba(100, 100, 255, 0.6);
+  background-color: #ccf;
+}
+
+.text {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  bottom: 0;
+  left: 5px;
+  position: absolute;
+  will-change: transform;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(100, 100, 255, 0.6);
+}
+
+.lefter {
+  transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+  background-image: url(https://media.istockphoto.com/id/1264544752/vector/computer-chip-icon-vector-stock-illustration.jpg?b=1&s=170x170&k=20&c=MX2xKdZwyxKmvDnHDWVMHVIXgV-fMGrXhbhq_WQRjbc=);
+}
+
+.left {
+  transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+  background-image: url(https://cdn0.iconfinder.com/data/icons/artificial-intelligence-8/48/1-Artificial_intelligence-128.png);
+}
+
+.center {
+  opacity: 1;
+  background-image: url(https://cdn3.iconfinder.com/data/icons/future-pack/64/054-technology-innovation-digital-data-information-128.png);
+}
+
+.right {
+  transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+  background-image: url(https://cdn0.iconfinder.com/data/icons/engineering-3/64/it_engineering-128.png);
+}
+
+.righter {
+  transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+  background-image: url(https://cdn3.iconfinder.com/data/icons/data-science-11/64/computer-science-technology-information-programming-128.png);
+}
+
+.explainer {
+  font-weight: 300;
+  font-size: 2rem;
+  color: #fff;
+  transition: all 0.6s ease;
+  width: 100%;
+  height: 100%;
+  background-color: #303050;
+  background-image: radial-gradient(circle at center top, #cce, #33a);
+  border-radius: 10px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons {
+  display: flex;
+  column-gap: 25px;
+}
+.icon {
+  align-items: center;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  font-size: 26px;
+  color: #fff;
+  border-radius: 50%;
+  outline: 2px solid #fff;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
+}
+.icon:hover {
+  outline-offset: 4px;
+}
+.icon i {
+  margin: auto;
+}
+.icon:hover i {
+  animation: shake 0.25s;
+}
+.icon--instagram:hover {
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  outline-color: #a02d76;
+}
+.icon--twitter:hover {
+  background-color: #1da1f2;
+  outline-color: #1da1f2;
+}
+.icon--linkedin:hover {
+  background-color: #0077b5;
+  outline-color: #0077b5;
+}
+.icon--github:hover {
+  background-color: #2ea44f;
+  outline-color: #2ea44f;
+}
+@keyframes shake {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+}

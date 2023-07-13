@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+h1 {
+  margin-left: 80px;
+  color: white;
+}
+header {
+  background-color: #323335;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#logo {
+  /* LOGO CSS   */
+  position: absolute;
+  margin-left: 2px;
+  margin-top: 2px;
+  width: 64px;
+  display: inline-block;
+}
+ul {
+  font-family: "Chivo Mono", monospace;
+  display: flex;
+  gap: 60px;
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  transition: 0.5s ease;
+}
+ul:hover li a {
+  color: #31e1f7;
+  text-transform: uppercase;
+}
+ul:hover li a:not(:hover) {
+  color: white;
+  opacity: 0.3;
+  filter: blur(1px);
+}
+footer {
+  place-items: center;
+  background-color: #090a0f;
+  color: gray;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feedback a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  transition: color 0.2s;
+}
+
+.feedback i {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.feedback a:hover {
+  color: #31e1f7;
+}
+.icons {
+  display: flex;
+  column-gap: 25px;
+}
+.icon {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 50%;
+  outline: 2px solid #fff;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
+}
+.icon:hover {
+  outline-offset: 4px;
+}
+.icon i {
+  margin: auto;
+}
+.icon:hover i {
+  animation: shake 0.25s;
+}
+.icon--instagram:hover {
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  outline-color: #a02d76;
+}
+.icon--twitter:hover {
+  background-color: #1da1f2;
+  outline-color: #1da1f2;
+}
+.icon--linkedin:hover {
+  background-color: #0077b5;
+  outline-color: #0077b5;
+}
+.icon--github:hover {
+  background-color: #2ea44f;
+  outline-color: #2ea44f;
+}
+@keyframes shake {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+}
+/* SEMESTERS  css */
+.semesters {
+  display: inline-block;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* EACH SEMESTER BOX CSS  */
+.home {
+  background: #abecf5;
+  width: var(--card-width);
+  height: 300px;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.7em;
+  color: black;
+  cursor: pointer;
+  font-family: cursive;
+  margin: 75px 15px;
+}
+
+.home:hover {
+  color: rgb(28 27 31 / 100%);
+  transition: color 1s;
+}
+
+.home:hover:before,
+.card:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+.home::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(var(--rotate),
+      #5ddcff,
+      #a0b6f9 43%,
+      #bc99ef);
+  position: absolute;
+  z-index: -1;
+  top: -1%;
+  left: -2%;
+  animation: spin 2.5s linear infinite;
+}
+
+.home::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(var(--rotate),
+      var(--rotate),
+      #5ddcff,
+      #6083eb 43%,
+      #652dba);
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+
+  100% {
+    --rotate: 360deg;
+  }
+}
