@@ -250,7 +250,15 @@ footer {
   .icons {
     column-gap: 15px;
   }
+.semesters {
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
 
+  .home {
+    width: calc(50% - 20px);
+    margin: 10px;
+  }
   .icon {
     width: 25px;
     height: 25px;
