@@ -357,14 +357,37 @@ main {
     flex-direction: column;
   }
 
-  .left,
+.left,
+  .lefter,
   .center,
   .right,
-  .lefter,
   .righter {
     width: 150px;
-    height: 120px;
+    height: 112.5px;
+    box-shadow: 0 0 10px 2.5px rgba(100, 100, 255, 0.4);
   }
+
+  .left {
+    transform: translateX(-15px) translateZ(-12.5px) rotateY(-5deg);
+  }
+
+  .lefter {
+    transform: translateX(-30px) translateZ(-25px) rotateY(-10deg);
+  }
+
+  .center {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .right {
+    transform: translateX(15px) translateZ(-12.5px) rotateY(5deg);
+  }
+
+  .righter {
+    transform: translateX(30px) translateZ(-25px) rotateY(10deg);
+  }
+}
 
   .text {
     transform: translateY(20px);
