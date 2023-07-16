@@ -250,19 +250,14 @@ footer {
   .icons {
     column-gap: 15px;
   }
- .semesters {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    margin: 0;
-    padding: 0;
-    justify-content: flex-start;
-    align-items: stretch;
-    scroll-snap-type: x mandatory;
+.semesters {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .home {
-    width: calc(50% - 20px);
-    margin: 10px;
+    width: 100%;
+    margin: 10px 0;
   }
   .icon {
     width: 25px;
