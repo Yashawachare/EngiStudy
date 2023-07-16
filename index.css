@@ -392,7 +392,6 @@ main {
   footer {
     flex-direction: column;
     padding: 10px;
-    justify-content: center;
     align-items: center;
     text-align: center;
   }
