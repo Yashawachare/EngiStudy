@@ -327,7 +327,12 @@ main {
   .icons {
     column-gap: 15px;
   }
-
+ footer {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   .icon {
     width: 30px;
     height: 30px;
@@ -369,7 +374,12 @@ main {
   .icons {
     column-gap: 15px;
   }
-
+ footer {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   .icon {
     width: 30px;
     height: 30px;
