@@ -220,3 +220,33 @@ footer {
     --rotate: 360deg;
   }
 }
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  /* Styles for devices with a maximum width of 768px */
+  header {
+    padding: 10px;
+  }
+
+  ul {
+    gap: 40px;
+  }
+
+  ul li a {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  footer {
+    padding: 5px;
+  }
+
+  .icons {
+    column-gap: 15px;
+  }
+
+  .icon {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+}
