@@ -222,13 +222,13 @@ footer {
 }
 /* Media Queries */
 @media only screen and (max-width: 768px) {
-  /* Styles for devices with a maximum width of 768px */
   header {
     padding: 10px;
   }
 
   ul {
-    gap: 40px;
+    flex-direction: column;
+    gap: 10px;
   }
 
   ul li a {
@@ -237,7 +237,14 @@ footer {
   }
 
   footer {
-    padding: 5px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feedback {
+    margin-top: 10px;
   }
 
   .icons {
